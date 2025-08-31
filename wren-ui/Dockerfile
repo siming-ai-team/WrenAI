@@ -1,13 +1,12 @@
-FROM node:18-bookworm-slim AS base
-
-# Install required packages
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+FROM node:insight-ai AS base
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 0
 ENV NODE_ENV production
+
+RUN yarn config set registry https://registry.npmmirror.com
 
 WORKDIR /app
 
