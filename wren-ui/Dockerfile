@@ -6,8 +6,6 @@ FROM node:insight-ai AS base
 ENV NEXT_TELEMETRY_DISABLED 0
 ENV NODE_ENV production
 
-RUN yarn config set registry https://registry.npmmirror.com
-
 WORKDIR /app
 
 # Enable corepack to manage yarn versions and set the correct yarn version
