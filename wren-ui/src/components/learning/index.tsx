@@ -192,8 +192,7 @@ const getData = (
   return [];
 };
 
-const isLearningAccessible = (pathname: string) =>
-  pathname.startsWith(Path.Modeling) || pathname.startsWith(Path.Home);
+const isLearningAccessible = (pathname: string) => false;
 
 interface Props {}
 
