@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 # 代理配置（按需修改）
-HTTP_PROXY="http://host.docker.internal:7890"
-HTTPS_PROXY="http://host.docker.internal:7890"
-NO_PROXY="localhost,127.0.0.1"
+# HTTP_PROXY="http://host.docker.internal:7890"
+# HTTPS_PROXY="http://host.docker.internal:7890"
+# NO_PROXY="localhost,127.0.0.1"
 
-docker build \
-  --build-arg "HTTP_PROXY ${HTTP_PROXY}" \
-  --build-arg "HTTPS_PROXY ${HTTPS_PROXY}" \
-  --build-arg "NO_PROXY ${NO_PROXY}" \
-  --add-host=host.docker.internal:host-gateway \
-  -t takingoff.ai/insight-ui \
-  .
+docker build -t takingoff.ai/insight-ui  .
+  # --build-arg "HTTP_PROXY ${HTTP_PROXY}" \
+  # --build-arg "HTTPS_PROXY ${HTTPS_PROXY}" \
+  # --build-arg "NO_PROXY ${NO_PROXY}" \
+  # --add-host=host.docker.internal:host-gateway \ 
